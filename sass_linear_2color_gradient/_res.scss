@@ -1,0 +1,27 @@
+// How to use:
+// color_1 - first color
+// color_2 - last color
+// start - first element number in a list of elements
+// len - gradient interval
+// selector - css-selector of the element
+
+@mixin linear_2color_gradient ($color_1, $color_2, $start, $len, $selector) {
+  @for $i from 1 through $len {
+    $w: ($i - 1) * (100 / ($len - 1));
+    #{$selector}:nth-child(#{$start + $i - 1}) {
+      background-color: mix($color_1, $color_2, $w);
+    }
+  }
+}
+
+@include linear_2color_gradient (red, blue, 2, 18, 'td');
+
+
+// nice and empty cells
+td {
+  border: 1px solid #ddd;
+  padding: 20px;
+  &:before {
+    content: ' ';
+  }
+}

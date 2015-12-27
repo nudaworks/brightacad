@@ -1,0 +1,80 @@
+td:nth-child(2) {
+    background-color: blue;
+}
+
+td:nth-child(3) {
+    background-color: #0f00f0;
+}
+
+td:nth-child(4) {
+    background-color: #1e00e1;
+}
+
+td:nth-child(5) {
+    background-color: #2d00d2;
+}
+
+td:nth-child(6) {
+    background-color: #3c00c3;
+}
+
+td:nth-child(7) {
+    background-color: #4b00b3;
+}
+
+td:nth-child(8) {
+    background-color: #5a00a4;
+}
+
+td:nth-child(9) {
+    background-color: #690095;
+}
+
+td:nth-child(10) {
+    background-color: #780086;
+}
+
+td:nth-child(11) {
+    background-color: #870078;
+}
+
+td:nth-child(12) {
+    background-color: #960069;
+}
+
+td:nth-child(13) {
+    background-color: #a50059;
+}
+
+td:nth-child(14) {
+    background-color: #b4004a;
+}
+
+td:nth-child(15) {
+    background-color: #c3003c;
+}
+
+td:nth-child(16) {
+    background-color: #d2002c;
+}
+
+td:nth-child(17) {
+    background-color: #e1001d;
+}
+
+td:nth-child(18) {
+    background-color: #f0000e;
+}
+
+td:nth-child(19) {
+    background-color: red;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+td:before {
+    content: ' ';
+}
+
