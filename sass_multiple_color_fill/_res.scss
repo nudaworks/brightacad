@@ -1,0 +1,38 @@
+// How to use:
+// colors - space separated list of colours
+// color_repeat - sets number of times one color is repeated in one iteretion
+// selector - selects a group of element to colour certain elements of it
+// elements - number of elements of a selector group
+
+
+@mixin multiple_color_fill($colors, $color_repeat, $selector, $elements) {
+  $color_len : length($colors);
+  $pos: 1;
+
+  @for $i from 1 through $elements {
+    // define color
+    $color: $color_len * ceil($pos/$color_repeat) / $color_len;
+
+    // add style
+    #{$selector}:nth-child(#{$i}) {
+      background-color: nth($colors, $color);
+    }
+
+    // reset and increment
+    @if ($pos == length($colors) * $color_repeat) {  $pos: 0;   }
+    $pos: $pos + 1;
+  }
+}
+
+
+@include multiple_color_fill(green blue khaki red orange, 2, 'td', 30);
+
+
+// nice and empty cells
+td {
+  border: 1px solid #ddd;
+  padding: 20px;
+  &:before {
+    content: ' ';
+  }
+}
