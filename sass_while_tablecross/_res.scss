@@ -1,0 +1,21 @@
+$ratio: 15;
+$i: 1;
+@while 0 < $ratio {
+  tr:nth-child(#{$i}) {
+    td:nth-child(#{$i}),
+    td:nth-child(#{$ratio}) {
+      background: khaki;
+    }
+  }
+  $i: $i + 1;
+  $ratio: $ratio - 1;
+}
+
+// nice and empty cells
+td {
+  border: 1px solid #eee;
+  padding: 20px;
+  &:before {
+    content: ' ';
+  }
+}
