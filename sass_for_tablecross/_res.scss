@@ -1,0 +1,18 @@
+$ratio: 15;
+@for $i from 1 through $ratio {
+  tr:nth-child(#{$i}) {
+    td:nth-child(#{$i}),
+    td:nth-child(#{$ratio - $i + 1}) {
+      background: khaki;
+    }
+  }
+}
+
+// nice and empty cells
+td {
+  border: 1px solid #eee;
+  padding: 20px;
+  &:before {
+    content: ' ';
+  }
+}
