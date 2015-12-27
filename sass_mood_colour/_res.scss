@@ -1,0 +1,65 @@
+
+// How to use:
+// selector - css-selector of the elements
+// len - elements quantity
+// color - basic color
+// ! mixin places color name after element content
+
+@mixin mood_colour ($selector, $len, $color) {
+  $i: 1;
+  @while $i < $len {
+    #{$selector}:nth-child(#{$i}) {
+      $result_color: lighten($color, ($i - 1) / $len * 50);
+      background-color: $result_color ;
+      animation-delay: #{($i - 1) / 5}s;
+      &:after {
+        content: '#{$result_color}';
+      }
+    }
+    $i: $i + 1;
+  }
+}
+
+@include mood_colour ('.mood_good_indicator td', 10, green);
+@include mood_colour ('.mood_bad_indicator td', 10, red);
+
+
+.mood_good_indicator, .mood_bad_indicator  {
+  display: none;
+  td {
+    padding: 20px;
+    visibility: hidden;
+    animation-name: zero_alpha;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+    &:before {
+      content: ' ';
+    }
+  }
+}
+
+.mood_good {
+  &:checked ~ .mood_good_indicator  {
+    display: block;
+    td {
+      animation-play-state: running;
+    }
+  }
+}
+.mood_bad {
+  margin-bottom: 20px;
+  &:checked ~ .mood_bad_indicator  {
+    display: block;
+    td {
+      animation-play-state: running;
+    }
+  }
+}
+
+@keyframes zero_alpha {
+  from { opacity: 0; }
+  to { opacity: 1; visibility: visible;}
+}
+
+

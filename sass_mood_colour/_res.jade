@@ -1,0 +1,24 @@
+doctype html
+html(lang='en')
+head
+meta(charset='utf-8')
+title sass mixin @mood_colour
+link(rel='stylesheet', href='style.css')
+body
+fieldset
+p what's your mood, pal?
+input(name='mood', class='mood_good', type='radio')
+| I feel teriific!
+    br
+input(name='mood', class='mood_bad', type='radio')
+| I feel terrible!
+    table(class='mood_good_indicator')
+- var cols = 10;
+tr
+- for (var i = 0; i < cols; i++)
+    td
+table(class='mood_bad_indicator')
+tr
+- for (var i = 0; i < cols; i++)
+    td
+ 

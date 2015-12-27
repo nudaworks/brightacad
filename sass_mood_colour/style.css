@@ -1,0 +1,187 @@
+.mood_good_indicator td:nth-child(1) {
+    background-color: green;
+    animation-delay: 0s;
+}
+.mood_good_indicator td:nth-child(1):after {
+    content: "green";
+}
+
+.mood_good_indicator td:nth-child(2) {
+    background-color: #009a00;
+    animation-delay: 0.2s;
+}
+.mood_good_indicator td:nth-child(2):after {
+    content: "#009a00";
+}
+
+.mood_good_indicator td:nth-child(3) {
+    background-color: #00b300;
+    animation-delay: 0.4s;
+}
+.mood_good_indicator td:nth-child(3):after {
+    content: "#00b300";
+}
+
+.mood_good_indicator td:nth-child(4) {
+    background-color: #00cc00;
+    animation-delay: 0.6s;
+}
+.mood_good_indicator td:nth-child(4):after {
+    content: "#00cc00";
+}
+
+.mood_good_indicator td:nth-child(5) {
+    background-color: #00e600;
+    animation-delay: 0.8s;
+}
+.mood_good_indicator td:nth-child(5):after {
+    content: "#00e600";
+}
+
+.mood_good_indicator td:nth-child(6) {
+    background-color: lime;
+    animation-delay: 1s;
+}
+.mood_good_indicator td:nth-child(6):after {
+    content: "lime";
+}
+
+.mood_good_indicator td:nth-child(7) {
+    background-color: #1aff1a;
+    animation-delay: 1.2s;
+}
+.mood_good_indicator td:nth-child(7):after {
+    content: "#1aff1a";
+}
+
+.mood_good_indicator td:nth-child(8) {
+    background-color: #33ff33;
+    animation-delay: 1.4s;
+}
+.mood_good_indicator td:nth-child(8):after {
+    content: "#33ff33";
+}
+
+.mood_good_indicator td:nth-child(9) {
+    background-color: #4dff4d;
+    animation-delay: 1.6s;
+}
+.mood_good_indicator td:nth-child(9):after {
+    content: "#4dff4d";
+}
+
+.mood_bad_indicator td:nth-child(1) {
+    background-color: red;
+    animation-delay: 0s;
+}
+.mood_bad_indicator td:nth-child(1):after {
+    content: "red";
+}
+
+.mood_bad_indicator td:nth-child(2) {
+    background-color: #ff1a1a;
+    animation-delay: 0.2s;
+}
+.mood_bad_indicator td:nth-child(2):after {
+    content: "#ff1a1a";
+}
+
+.mood_bad_indicator td:nth-child(3) {
+    background-color: #ff3333;
+    animation-delay: 0.4s;
+}
+.mood_bad_indicator td:nth-child(3):after {
+    content: "#ff3333";
+}
+
+.mood_bad_indicator td:nth-child(4) {
+    background-color: #ff4d4d;
+    animation-delay: 0.6s;
+}
+.mood_bad_indicator td:nth-child(4):after {
+    content: "#ff4d4d";
+}
+
+.mood_bad_indicator td:nth-child(5) {
+    background-color: #ff6666;
+    animation-delay: 0.8s;
+}
+.mood_bad_indicator td:nth-child(5):after {
+    content: "#ff6666";
+}
+
+.mood_bad_indicator td:nth-child(6) {
+    background-color: #ff8080;
+    animation-delay: 1s;
+}
+.mood_bad_indicator td:nth-child(6):after {
+    content: "#ff8080";
+}
+
+.mood_bad_indicator td:nth-child(7) {
+    background-color: #ff9999;
+    animation-delay: 1.2s;
+}
+.mood_bad_indicator td:nth-child(7):after {
+    content: "#ff9999";
+}
+
+.mood_bad_indicator td:nth-child(8) {
+    background-color: #ffb3b3;
+    animation-delay: 1.4s;
+}
+.mood_bad_indicator td:nth-child(8):after {
+    content: "#ffb3b3";
+}
+
+.mood_bad_indicator td:nth-child(9) {
+    background-color: #ffcccc;
+    animation-delay: 1.6s;
+}
+.mood_bad_indicator td:nth-child(9):after {
+    content: "#ffcccc";
+}
+
+.mood_good_indicator, .mood_bad_indicator {
+    display: none;
+}
+.mood_good_indicator td, .mood_bad_indicator td {
+    padding: 20px;
+    visibility: hidden;
+    animation-name: zero_alpha;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
+.mood_good_indicator td:before, .mood_bad_indicator td:before {
+    content: ' ';
+}
+
+.mood_good:checked ~ .mood_good_indicator {
+    display: block;
+}
+.mood_good:checked ~ .mood_good_indicator td {
+    animation-play-state: running;
+}
+
+.mood_bad {
+    margin-bottom: 20px;
+}
+.mood_bad:checked ~ .mood_bad_indicator {
+    display: block;
+}
+.mood_bad:checked ~ .mood_bad_indicator td {
+    animation-play-state: running;
+}
+
+@keyframes zero_alpha {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
