@@ -1,0 +1,13 @@
+table td, table th {
+    padding: 5px 15px;
+    border: 1px solid #ddd;
+}
+td {
+    background: #F69B91;
+}
+tr.active td {
+    background: #A1CEA1;
+}
+tr.summary td, th {
+    background: #ddd;
+}
