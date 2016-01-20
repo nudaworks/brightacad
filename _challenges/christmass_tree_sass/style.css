@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.star {
+    padding: 0 12.4 17.6;
+    width: 81.6;
+    margin: 100px;
+    background: none;
+}
+.star .figure {
+    position: relative;
+    width: 40px;
+    border: 40px solid transparent;
+    border-bottom: 28px solid red;
+    -webkit-transform: rotate(34deg);
+    -moz-transform: rotate(34deg);
+    -ms-transform: rotate(34deg);
+    -o-transform: rotate(34deg);
+}
+.star .figure:before, .star .figure:after {
+    display: block;
+    position: absolute;
+    border: 40px solid transparent;
+    content: '';
+}
+.star .figure:before {
+    top: -21.62162px;
+    left: -20px;
+    border-bottom: 28px solid red;
+    -webkit-transform: rotate(73deg);
+    -moz-transform: rotate(73deg);
+    -ms-transform: rotate(73deg);
+    -o-transform: rotate(73deg);
+}
+.star .figure:after {
+    top: -2.22222px;
+    left: -26.66667px;
+    border-bottom: 28px solid red;
+    -webkit-transform: rotate(144.5deg);
+    -moz-transform: rotate(144.5deg);
+    -ms-transform: rotate(144.5deg);
+    -o-transform: rotate(144.5deg);
+}
+
+.star {
+    padding-top: 30px;
+    padding-right: 100px;
+    padding-bottom: 40px;
+    padding-left: 67px;
+    margin: -120px auto;
+    -webkit-transform: rotate(37deg);
+    -moz-transform: rotate(37deg);
+    -ms-transform: rotate(37deg);
+    -o-transform: rotate(37deg);
+}
+
+.christmass-tree {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+.christmass-tree .branch {
+    margin: 0 auto;
+}
+
+.christmass-tree .branch:nth-child(10) {
+    width: 18;
+    margin-bottom: -51.01;
+    border: 28.57143px solid transparent;
+    border-top: 30.4px solid lightgreen;
+}
+
+.christmass-tree .branch:nth-child(9) {
+    width: 36;
+    margin-bottom: -102.02;
+    border: 57.14286px solid transparent;
+    border-top: 60.8px solid #81e081;
+}
+
+.christmass-tree .branch:nth-child(8) {
+    width: 54;
+    margin-bottom: -153.03;
+    border: 85.71429px solid transparent;
+    border-top: 91.2px solid #73d273;
+}
+
+.christmass-tree .branch:nth-child(7) {
+    width: 72;
+    margin-bottom: -204.04;
+    border: 114.28571px solid transparent;
+    border-top: 121.6px solid #64c464;
+}
+
+.christmass-tree .branch:nth-child(6) {
+    width: 90;
+    margin-bottom: -255.05;
+    border: 142.85714px solid transparent;
+    border-top: 152px solid #56b656;
+}
+
+.christmass-tree .branch:nth-child(5) {
+    width: 108;
+    margin-bottom: -306.06;
+    border: 171.42857px solid transparent;
+    border-top: 182.4px solid #48a948;
+}
+
+.christmass-tree .branch:nth-child(4) {
+    width: 126;
+    margin-bottom: -357.07;
+    border: 200px solid transparent;
+    border-top: 212.8px solid #399b39;
+}
+
+.christmass-tree .branch:nth-child(3) {
+    width: 144;
+    margin-bottom: -408.08;
+    border: 228.57143px solid transparent;
+    border-top: 243.2px solid #2b8d2b;
+}
+
+.christmass-tree .branch:nth-child(2) {
+    width: 162;
+    margin-bottom: -459.09;
+    border: 257.14286px solid transparent;
+    border-top: 273.6px solid #1c7f1c;
+}
+
+.christmass-tree .branch:nth-child(1) {
+    width: 180;
+    margin-bottom: -510.1;
+    border: 285.71429px solid transparent;
+    border-top: 304px solid #0e710e;
+}
+

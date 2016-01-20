@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin transform_rotate($deg) {
+  -webkit-transform: rotate(#{$deg}deg);
+  -moz-transform:    rotate(#{$deg}deg);
+  -ms-transform:     rotate(#{$deg}deg);
+  -o-transform:      rotate(#{$deg}deg);
+}
+
+@mixin star5($size, $color) {
+  $c1: $color;
+  $c2: $color;
+  $c3: $color;
+  .star {
+    padding: (0) ($size * 0.31) ($size * 0.44);
+    width: $size * 2.04;
+    margin: 100px;
+    background: none;
+    .figure {
+      position: relative;
+      width: #{$size}px;
+      border: #{$size}px solid transparent;
+      border-bottom: #{$size * 0.7}px solid #{$c1};
+      @include transform_rotate(34);
+      &:before, &:after {
+        display: block;
+        position: absolute;
+        border: #{$size}px solid transparent;
+        content: '';
+      }
+      &:before {
+        top: -#{$size / 1.85}px;
+        left: -#{$size / 2}px;
+        border-bottom: #{$size * 0.7}px solid #{$c2};
+        @include transform_rotate(73);
+      }
+      &:after {
+        top: -#{$size / 18}px;
+        left: -#{$size / 1.5}px;
+        border-bottom: #{$size * 0.7}px solid #{$c3};
+        @include transform_rotate(144.5);
+      }
+    }
+  }
+}
+
+@mixin christmass_tree($branches, $width, $height, $star_height) {
+  $light: lightgreen;
+  $dark: darkgreen;
+  $i: $branches;
+  $j: 1;
+
+  @include star5($star_height, 'red');
+  .star {
+    padding-top: 30px;
+    padding-right: 100px;
+    padding-bottom: 40px;
+    padding-left: 67px;
+    margin: -120px auto;
+    @include transform_rotate(37);
+  }
+
+  .christmass-tree {
+    @include transform_rotate(180);
+    .branch {
+      margin: 0 auto;
+    }
+  }
+
+  @while $i > 0 {
+    .christmass-tree .branch:nth-child(#{$i}) {
+      $color: mix($light, $dark, $i * 100 / $branches);
+      width: $width / ($branches / $j);
+      margin-bottom: -($j * 30 * 1.7 + $j / 100);
+      border: #{$j * $width / 7}px solid transparent;
+      border-top: #{$j * $height / $branches * 0.76}px solid $color;
+    }
+    $i: $i - 1;
+    $j: $j + 1;
+  }
+}
+
+@include christmass_tree(10, 200, 400, 40);
